@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bonk - $FAPPY</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="logo-section">
+                <div class="logo-placeholder">
+                    <div class="logo-image">
+                        <!-- Logo will be placed here -->
+                        <img src="logo.png" height="180px" width="auto">
+                    </div>
+                </div>
+                <div class="title-section">
+                    <h1 class="game-title">Flappy Bonk</h1>
+                    <div class="token-info">
+                        <span class="token-symbol">$FAPPY</span>
+                        <span class="token-name">- FLAPPY BONK</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <button class="cta-button primary">Join Our Community</button>
+                <button class="cta-button secondary">Buy $FAPPY</button>
+            </div>
+        </header>
+
+        <!-- Game Section -->
+        <main class="game-section">
+            <div class="game-container">
+                <canvas id="gameCanvas" width="600" height="700"></canvas>
+                
+                <!-- Game UI Overlay -->
+                <div class="game-ui">
+                    <div class="score-display">
+                        <span class="score-label">Score:</span>
+                        <span id="score" class="score-value">0</span>
+                    </div>
+                    
+                    <div class="high-score-display">
+                        <span class="high-score-label">Best:</span>
+                        <span id="highScore" class="high-score-value">0</span>
+                    </div>
+                </div>
+
+                <!-- Game Start Screen -->
+                <div id="startScreen" class="game-screen">
+                    <h2>Flappy Bonk</h2>
+                    <p>Click or Press Space to Start</p>
+                    <button id="startButton" class="start-button">Start Game</button>
+                </div>
+
+                <!-- Game Over Screen -->
+                <div id="gameOverScreen" class="game-screen hidden">
+                    <h2>Game Over!</h2>
+                    <p>Score: <span id="finalScore">0</span></p>
+                    <button id="restartButton" class="restart-button">Play Again</button>
+                </div>
+            </div>
+
+            <!-- Character Selection -->
+            <div class="character-selector">
+                <h3>Choose Your Character</h3>
+                <div class="character-options">
+                    <div class="character-option active" data-character="bonk">
+                        <img src="avatar1.png" alt="Bonk" class="character-preview">
+                        <span>Bonk</span>
+                    </div>
+                    <div class="character-option" data-character="hippo">
+                        <img src="avatar2.png" alt="Hippo" class="character-preview">
+                        <span>Hippo</span>
+                    </div>
+                    <div class="character-option" data-character="bird">
+                        <img src="avatar3.png" alt="Bird" class="character-preview">
+                        <span>Bird</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Community Section -->
+        <footer class="community-section">
+            <div class="community-content">
+                <div class="x-community-card">
+                    <div class="x-logo">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </div>
+                    <div class="x-content">
+                        <h3>Join Our X Community</h3>
+                        <p>Be part of the $FAPPY revolution! Connect with fellow Flappy Bonk enthusiasts on X.</p>
+                        <a href="#" class="x-button">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                            Follow on X
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html> 
